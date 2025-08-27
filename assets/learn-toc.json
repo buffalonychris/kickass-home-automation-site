@@ -1,0 +1,42 @@
+[
+  {
+    "title": "What is home automation?",
+    "href": "what-is-home-automation.html"
+  },
+  {
+    "title": "Smart Home vs Home Automation",
+    "href": "smart-home-vs-home-automation.html"
+  },
+  {
+    "title": "How much does it cost to install a home automation system?",
+    "href": "home-automation-cost.html"
+  },
+  {
+    "title": "Is a Raspberry Pi good for home automation?",
+    "href": "raspberry-pi-for-home-automation.html"
+  },
+  {
+    "title": "Which is the right home automation system for you?",
+    "href": "choosing-your-system.html"
+  },
+  {
+    "title": "Home Assistant Setup",
+    "href": "home-assistant-setup.html"
+  },
+  {
+    "title": "Google Home Setup",
+    "href": "google-home-setup.html"
+  },
+  {
+    "title": "Alexa Voice Control Setup",
+    "href": "alexa-setup.html"
+  },
+  {
+    "title": "Apple HomeKit Setup",
+    "href": "apple-homekit-setup.html"
+  },
+  {
+    "title": "Alternatives to consider",
+    "href": "alternatives.html"
+  }
+]
