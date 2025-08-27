@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Study — Real‑World Home Automations (Jimmy Hawkins)</title>
+  <meta name="description" content="Room-by-room automations with devices, triggers, and package fit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .metrics { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+    .metric { background:#111; border:1px solid rgba(255,215,0,.2); border-radius:12px; padding:1rem; }
+    .metric h3 { margin:0 0 .25rem 0; font-size:1.1rem; color:#FFD700; }
+    .metric .big { font-size:1.8rem; font-weight:700; }
+    .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+    .card { background:#0A0A0A; border:1px solid rgba(255,215,0,.18); border-radius:14px; padding:1rem; }
+    .card-ico .ico { width:28px; height:28px; color:#FFD700; }
+    table.autos { width:100%; border-collapse: collapse; }
+    table.autos th, table.autos td { padding:.75rem; border-bottom:1px solid rgba(255,255,255,.08); vertical-align: top; }
+    table.autos th { text-align:left; color:#FFD700; font-weight:600; }
+    td.icon { width:2rem; }
+    td.icon .ico { width:20px; height:20px; color:#FFD700; vertical-align:middle; }
+    td.name .purpose { color:#999; font-size:.95rem; margin-top:.25rem; }
+    td.devices { color:#bbb; font-size:.95rem; }
+    .badge { display:inline-block; padding:.15rem .45rem; border-radius:999px; font-size:.8rem; line-height:1; border:1px solid transparent; }
+    .badge-yes { background:rgba(46,204,113,.12); color:#2ecc71; border-color:rgba(46,204,113,.3); }
+    .badge-partial { background:rgba(255,215,0,.12); color:#FFD700; border-color:rgba(255,215,0,.3); }
+    .badge-unknown { background:rgba(150,150,150,.12); color:#bbb; border-color:rgba(150,150,150,.3); }
+    .badge-no { background:rgba(231,76,60,.12); color:#e74c3c; border-color:rgba(231,76,60,.3); }
+    .fits { display:grid; gap:.25rem; }
+    .fit-label { display:inline-block; width:6.5rem; color:#aaa; }
+    .muted { color:#aaa; }
+  </style>
+</head>
+<body class="theme-dark">
+  <div id="site-header"></div>
+
+  <main class="section">
+    <div class="container">
+      <h1>Case Study: Real‑World Home Automations</h1>
+      <p class="lead">Pulled from a public walkthrough of Jimmy Hawkins’ home. Below you’ll find each automation’s purpose, devices, and how it maps to our <strong>Alexa</strong>, <strong>Google</strong>, and <strong>Home Assistant</strong> packages.</p>
+
+      <div class="metrics">
+        <div class="metric"><h3>Total automations</h3><div class="big">34</div></div>
+        <div class="metric"><h3>Rooms covered</h3><div class="big">13</div><div class="muted">Entry, Entry / Whole‑home mesh, Garage, Kid’s Room (Daughter), Kid’s Room (Son), Kitchen, Laundry Room, Living Room, Master Bathroom, Master Bedroom, Office, Office / Whole‑home, Whole‑home platform</div></div>
+        <div class="metric"><h3>Data source</h3><div class="muted">User-provided transcript (timestamps unavailable)</div></div>
+      </div>
+    </div>
+  </main>
+
+  <section class="section alt">
+    <div class="container">
+      <h2>Highlights</h2>
+      <div id="cs-cards" class="cards"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>All automations</h2>
+      <div id="cs-table"></div>
+      <p class="muted">“Package fit” is conservative. “Partial” means it typically works with adapters/bridges (e.g., Z‑Wave/Zigbee hubs, Matter bridges) or via community integrations.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Want these in your home?</h2>
+      <p>Book a consult and we’ll translate any of these ideas into your ecosystem with clear scope and pricing.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="intake-residential.html">Start your estimate</a>
+        <a class="btn btn-secondary" href="packages.html">Compare packages</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="assets/nav-loader.js"></script>
+  <script>
+    const ROWS = [{"room": "Living Room", "name": "Leviton scene controller for lighting", "purpose": "Simple, reliable scene selection for common use cases", "devices": "Leviton scene controller; smart lights (not individually specified)", "icon": "lightbulb", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Living Room", "name": "Presence-based lighting hold", "purpose": "Prevents lights turning off during TV watching", "devices": "Presence sensor (brand not specified)", "icon": "lightbulb", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Living Room", "name": "Shelf LED scenes + alarm siren lighting", "purpose": "Ambience and alarm deterrence", "devices": "Govee M1 LED strips in floating shelves (transcript spelled 'GOI/Goie'); custom solder jumpers", "icon": "lightbulb", "fitA": "Y", "fitG": "Y", "fitH": "P"}, {"room": "Living Room", "name": "Portable lamp for patio / deck nights", "purpose": "Portable accent lighting outdoors", "devices": "Eve Flare (Thread, HomeKit; Matter update mentioned)", "icon": "misc", "fitA": "P", "fitG": "P", "fitH": "P"}, {"room": "Master Bedroom", "name": "Nighttime scene via SmartThings Station + occupancy", "purpose": "One\u2011tap bedtime routine; energy saving", "devices": "Hunter Wi\u2011Fi fan; SwitchBot Curtain Motors + solar; SmartThings Station; Motion sensor", "icon": "lightbulb", "fitA": "Y", "fitG": "Y", "fitH": "Y"}, {"room": "Master Bedroom", "name": "Automated curtains schedule", "purpose": "Light/privacy routine", "devices": "SwitchBot Curtain Motors (gen1) + solar", "icon": "lightbulb", "fitA": "Y", "fitG": "Y", "fitH": "Y"}, {"room": "Master Bathroom", "name": "Privacy-aware shade control via button + humidity", "purpose": "Prevent exposure during shower; simple override", "devices": "Zigbee motorized shades ('ulax'); 4\u2011in\u20111 humidity sensor; Zooz button controller", "icon": "curtains", "fitA": "P", "fitG": "P", "fitH": "Y"}, {"room": "Master Bathroom", "name": "Auto power-off vanity outlet for hair appliances", "purpose": "Reduce fire risk; peace of mind", "devices": "Smart outlet/plug", "icon": "outlet", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Master Bathroom", "name": "Toothbrush-driven whole\u2011house goodnight", "purpose": "Hands\u2011free bedtime trigger", "devices": "Oral\u2011B BT toothbrush via Home Assistant", "icon": "toothbrush", "fitA": "P", "fitG": "U", "fitH": "Y"}, {"room": "Master Bathroom", "name": "Echo Flex voice presence", "purpose": "Convenience", "devices": "Echo Flex (Alexa)", "icon": "presence", "fitA": "Y", "fitG": "U", "fitH": "U"}, {"room": "Kitchen", "name": "Smart faucet presets and voice fill", "purpose": "Hands\u2011free measured fill", "devices": "U by Moen smart faucet", "icon": "faucet", "fitA": "Y", "fitG": "Y", "fitH": "P"}, {"room": "Kitchen", "name": "Microwave drawer voice/open", "purpose": "Novel but low utility", "devices": "Sharp microwave drawer (Wi\u2011Fi)", "icon": "microwave", "fitA": "P", "fitG": "P", "fitH": "U"}, {"room": "Kitchen", "name": "Echo Show 15 as Fire TV screen", "purpose": "Context screen", "devices": "Amazon Echo Show 15 with Fire TV", "icon": "tv", "fitA": "Y", "fitG": "U", "fitH": "U"}, {"room": "Kitchen", "name": "Synchronized ceiling lights via Z\u2011Wave associations", "purpose": "Reliable multi\u2011switch behavior w/o hub automations", "devices": "Zooz Z\u2011Wave smart dimmers; Z\u2011Wave association", "icon": "lightbulb", "fitA": "P", "fitG": "P", "fitH": "Y"}, {"room": "Kitchen", "name": "Coffee\u2011ready announcement via temp spike", "purpose": "Signal coffee readiness", "devices": "Temp/air-quality sensor (brand n/s)", "icon": "thermometer", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Laundry Room", "name": "Washer done alert (energy sensing)", "purpose": "Cycle complete for non\u2011smart washer", "devices": "Energy\u2011monitoring smart plug (load\u2011rated)", "icon": "outlet", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Laundry Room", "name": "Dryer done alert (vibration)", "purpose": "Cycle complete for non\u2011smart dryer", "devices": "Vibration sensor", "icon": "thermometer", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Laundry Room", "name": "Water leak protection", "purpose": "Prevent flood damage", "devices": "Water leak sensor; smart main shutoff (implied)", "icon": "thermometer", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Kid\u2019s Room (Son)", "name": "Customizable wall lights scenes", "purpose": "Fun ambience", "devices": "Govee Glide Hexa lights", "icon": "lightbulb", "fitA": "Y", "fitG": "Y", "fitH": "P"}, {"room": "Kid\u2019s Room (Son)", "name": "Automated shade schedule", "purpose": "Light routine", "devices": "IKEA Zigbee shade", "icon": "curtains", "fitA": "P", "fitG": "P", "fitH": "Y"}, {"room": "Kid\u2019s Room (Son)", "name": "Nightstand lamp remote", "purpose": "Accessible manual control", "devices": "Third Reality button; lamp", "icon": "button", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Kid\u2019s Room (Daughter)", "name": "Automated curtains schedule", "purpose": "Light/privacy routine; ecosystem reach", "devices": "SwitchBot curtain motors (latest) + SwitchBot Hub (Matter)", "icon": "lightbulb", "fitA": "Y", "fitG": "Y", "fitH": "Y"}, {"room": "Kid\u2019s Room (Daughter)", "name": "Govee table lamp scenes", "purpose": "Comfort/fun", "devices": "Govee table lamp", "icon": "lightbulb", "fitA": "Y", "fitG": "Y", "fitH": "P"}, {"room": "Kid\u2019s Room (Daughter)", "name": "Fandelier RF control via bridge", "purpose": "Integrate RF fan with voice/automation", "devices": "Fandelier (RF remote) + Bond or Broadlink bridge", "icon": "fan", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Entry / Whole\u2011home mesh", "name": "Zigbee + Z\u2011Wave mesh design", "purpose": "Robust mesh; consistent aesthetics", "devices": "Jasco/Enbrighten Zigbee dimmer; Jasco Z\u2011Wave Pro; Zooz Z\u2011Wave dimmer", "icon": "lightbulb", "fitA": "P", "fitG": "P", "fitH": "Y"}, {"room": "Entry", "name": "Dog bell notification", "purpose": "Timely potty alerts", "devices": "Vibration sensor on dog bell", "icon": "thermometer", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Garage", "name": "Amazon Key in\u2011garage delivery", "purpose": "Package security", "devices": "MyQ smart garage opener", "icon": "garage", "fitA": "Y", "fitG": "P", "fitH": "P"}, {"room": "Garage", "name": "Smart mousetrap alert", "purpose": "Pest control + status", "devices": "Dome Z\u2011Wave Mouser", "icon": "mouse", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Office", "name": "Voice\u2011enabled wall dimmer", "purpose": "Integrated voice in wall control", "devices": "Leviton Voice Dimmer (Alexa) + Zigbee dimmer", "icon": "lightbulb", "fitA": "Y", "fitG": "U", "fitH": "U"}, {"room": "Office", "name": "Appliance safety off when away", "purpose": "Fire safety", "devices": "Smart plug (scent warmer)", "icon": "outlet", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Office", "name": "Dog crate monitoring", "purpose": "Pet welfare monitoring", "devices": "Wyze camera", "icon": "camera", "fitA": "Y", "fitG": "Y", "fitH": "P"}, {"room": "Office", "name": "Adaptive shade based on sunlight (lux)", "purpose": "Reduce glare while working", "devices": "Third Reality Zigbee smart blinds; motion sensor with lux", "icon": "curtains", "fitA": "U", "fitG": "U", "fitH": "U"}, {"room": "Office / Whole\u2011home", "name": "Nightly robot vacuum run", "purpose": "Daily cleaning", "devices": "Dreame L20 Ultra robot vacuum/mop", "icon": "robot", "fitA": "Y", "fitG": "Y", "fitH": "P"}, {"room": "Whole\u2011home platform", "name": "Home Assistant Yellow primary hub", "purpose": "Flexibility/power", "devices": "Home Assistant Yellow; SmartThings", "icon": "hub", "fitA": "P", "fitG": "U", "fitH": "Y"}];
+
+    function badge(v){
+      const m = {"Y":["Yes","badge-yes"],"P":["Partial","badge-partial"],"U":["Unknown","badge-unknown"],"N":["No","badge-no"]};
+      const x = m[v] || ["Unknown","badge-unknown"];
+      return `<span class="badge ${x[1]}" title="${x[0]}">${x[0]}</span>`;
+    }
+    function esc(s){ return (s||"").toString().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+    function ico(slug){ return `<svg class="ico"><use href="assets/icons.svg#icon-${slug||'misc'}"></use></svg>`; }
+
+    (function(){ // Highlights
+      const keys = ["toothbrush","coffee","mouser","mousetrap","presence","dog","leak","robot","fandelier","echo show 15","myq"];
+      const scored = ROWS.map((r,i)=>({i,score:keys.reduce((n,k)=>n+((r.name+" "+r.devices).toLowerCase().includes(k)?1:0),0)}))
+                         .sort((a,b)=>b.score-a.score).slice(0,8);
+      const pick = scored.map(x=>ROWS[x.i]);
+      const html = pick.map(r=>`
+        <div class="card">
+          <div class="card-ico">${ico(r.icon)}</div>
+          <h3>${esc(r.name)}</h3>
+          <p class="muted">${esc(r.room)}</p>
+          <p>${esc(r.purpose)}</p>
+          <p class="devices">${esc(r.devices)}</p>
+        </div>`).join("");
+      document.getElementById("cs-cards").innerHTML = html;
+    })();
+
+    (function(){ // Table
+      const rows = ROWS.map(r=>`
+        <tr>
+          <td class="icon">${ico(r.icon)}</td>
+          <td class="room">${esc(r.room)}</td>
+          <td class="name"><strong>${esc(r.name)}</strong><div class="purpose">${esc(r.purpose)}</div></td>
+          <td class="devices">${esc(r.devices)}</td>
+          <td class="fit">
+            <div class="fits">
+              <div><span class="fit-label">Alexa</span> ${badge(r.fitA)}</div>
+              <div><span class="fit-label">Google</span> ${badge(r.fitG)}</div>
+              <div><span class="fit-label">Home&nbsp;Assistant</span> ${badge(r.fitH)}</div>
+            </div>
+          </td>
+        </tr>`).join("");
+      document.getElementById("cs-table").innerHTML = `<table class="autos"><thead><tr><th></th><th>Room</th><th>Automation</th><th>Devices</th><th>Package fit</th></tr></thead><tbody>${rows}</tbody></table>`;
+    })();
+  </script>
+</body>
+</html>
