@@ -1,0 +1,4 @@
+
+/* Rotator optional styles if you move CSS to assets/styles.css */
+.hero { position: relative; min-height: 52vh; display:flex; align-items:center; }
+.reason-rotator { position: relative; margin-top: 1.25rem; height: 3.6rem; overflow: hidden; }
