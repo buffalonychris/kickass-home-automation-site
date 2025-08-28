@@ -68,3 +68,20 @@ ul.bullets li { margin:.25rem 0; }
 .pager a { display:inline-flex; align-items:center; gap:.5rem; padding:.5rem .75rem; border:1px solid rgba(255,215,0,.25); border-radius:999px; color:#FFD700; text-decoration:none; }
 .pager a:hover { background:rgba(255,215,0,.08); border-color:rgba(255,215,0,.5); }
 .container.narrow { max-width:880px; }
+/* === APPEND: Learn card & breadcrumb hardening (v2) === */
+a.card, a.card:link, a.card:visited { color:#fff !important; text-decoration:none !important; display:block; }
+a.card:hover { text-decoration:none !important; }
+a.card h3 { color:#FFD700 !important; margin-top:0; }
+.card p { color:#bbb !important; }
+.grid-3 { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; }
+.grid-2 { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; }
+
+.breadcrumbs { font-size:.95rem; color:#bbb; margin-bottom:.75rem; }
+.breadcrumbs a { color:#FFD700 !important; text-decoration:none; }
+.breadcrumbs a:hover { text-decoration:underline; }
+
+.pager { display:flex; justify-content:space-between; gap:1rem; margin-top:2rem; }
+.pager a { display:inline-flex; align-items:center; gap:.5rem; padding:.5rem .75rem; border:1px solid rgba(255,215,0,.25); border-radius:999px; color:#FFD700 !important; text-decoration:none; }
+.pager a:hover { background:rgba(255,215,0,.08); border-color:rgba(255,215,0,.5); }
+
+.container.narrow { max-width:880px; }
