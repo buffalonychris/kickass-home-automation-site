@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
   <title>Packages — KickAss Home Automation</title>
-  <meta name="description" content="Three ways to build: Alexa‑based, Google‑based, or Home Assistant‑based. Start with what you own or go pro from day one." />
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="One Hub. One App. One Brain. Choose a package that fits your home and grow as you go." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css" />
-
+  <link rel="stylesheet" href="assets/styles.css?v=4" />
+  <style>
+    .pkg-dot{display:inline-block;width:.65rem;height:.65rem;border-radius:50%;margin-right:.4rem;transform:translateY(-1px);}
+    .dot-green{background:#20c997;}
+    .dot-blue{background:#339af0;}
+    .dot-purple{background:#845ef7;}
+    .pkg-card h3{display:flex;align-items:center;gap:.5rem;margin-bottom:.25rem;}
+    .price{font-weight:600;margin:.2rem 0 .6rem 0;color:#FFD700;}
+    .pkg-card ul{margin:.5rem 0 .75rem 1.1rem;}
+    .pkg-card li{margin:.2rem 0;}
+    .note{font-size:.9rem;opacity:.85;}
+    .cta{margin-top:.5rem;}
+  </style>
 </head>
 <body class="theme-dark">
   <div id="site-header"></div>
@@ -18,38 +28,87 @@
   <main class="section">
     <div class="container">
       <h1>Packages</h1>
-      <p class="lead">Start from your ecosystem—or choose the most flexible stack.</p>
+      <p class="lead"><strong>One Hub. One App. One Brain.</strong> No juggling. No compromises. Just a house that responds to you.</p>
+
       <div class="grid-3">
-        <div class="card">
-          <h3>Alexa‑Based</h3>
-          <ul class="bullets">
-            <li>Echo devices, Leviton voice dimmers, Ring/Key</li>
-            <li>Great for simple voice control and routines</li>
-            <li>Optional: SwitchBot bridge for curtains & RF fans</li>
+        <div class="card pkg-card">
+          <h3><span class="pkg-dot dot-green"></span>KickStart Core — Essentials</h3>
+          <p class="price">Installed: ~$5,500–6,750</p>
+          <ul>
+            <li>🔒 Smart lock + door/window sensors</li>
+            <li>🔥 Smoke, CO₂, and leak detection</li>
+            <li>🌡️ Smart thermostat</li>
+            <li>💡 Lighting control in key rooms</li>
+            <li>🚗 Smart garage door control</li>
+            <li>📱 Tablet hub + phone app</li>
+            <li>⚡ Energy monitoring (whole home + appliance)</li>
           </ul>
-          <a class="btn btn-secondary" href="intake-residential.html">Start with Alexa</a>
+          <p class="note">For safety, comfort, and simple control.</p>
+          <div class="cta">
+            <a class="btn btn-secondary" href="intake-residential.html?pkg=kickstart-core">Start with KickStart</a>
+          </div>
+        </div>
+
+        <div class="card pkg-card">
+          <h3><span class="pkg-dot dot-blue"></span>Command Plus — Comfort + Security</h3>
+          <p class="price">Installed: ~$8,000–9,750</p>
+          <ul>
+            <li>Everything in <strong>KickStart Core</strong>, plus:</li>
+            <li>🪟 Automated blinds or curtains (4 windows)</li>
+            <li>📷 4 outdoor + 2 indoor cameras w/ AI detection</li>
+            <li>💡 Motion‑sensing floodlights (2 zones)</li>
+            <li>👀 Occupancy sensors (bathroom, office, living, kitchen, deck)</li>
+            <li>🖥️ Office “modes” (morning/day/evening)</li>
+            <li>🎬 Living room: TV, lights, music tied together</li>
+            <li>🍳 Kitchen tablet wakes for football, cooking, or music</li>
+            <li>🌀 Ceiling fan control</li>
+          </ul>
+          <p class="note">For families who want their home to anticipate their needs.</p>
+          <div class="cta">
+            <a class="btn btn-secondary" href="intake-residential.html?pkg=command-plus">Start with Command Plus</a>
+          </div>
+        </div>
+
+        <div class="card pkg-card">
+          <h3><span class="pkg-dot dot-purple"></span>Orchestrator Works — Whole‑Home Harmony</h3>
+          <p class="price">Installed: ~$12,000–15,750</p>
+          <ul>
+            <li>Everything in <strong>Command Plus</strong>, plus:</li>
+            <li>🚰 Faucet control (coffee station, jug filling)</li>
+            <li>🌡️ Radiant floor heating/cooling (1 zone included)</li>
+            <li>🎵 Whole‑home audio (receiver + 4–6 speakers, optional soundbar)</li>
+            <li>🏊 Pool/hot tub automation</li>
+            <li>🚿 Smart shower upgrade (temp + presets)</li>
+          </ul>
+          <p class="note">For clients who want every system in harmony — air, water, light, sound, safety, and comfort.</p>
+          <div class="cta">
+            <a class="btn btn-secondary" href="intake-residential.html?pkg=orchestrator-works">Start with Orchestrator Works</a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="rule" />
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Why KickAss?</h3>
+          <ul>
+            <li>✅ <strong>One hub, one app, one brain</strong></li>
+            <li>✅ <strong>Local‑first reliability</strong> — works even if internet is down</li>
+            <li>✅ <strong>Scenes you can trust</strong> — set once, works every time</li>
+            <li>✅ <strong>Future‑proof</strong> — Matter, Zigbee, Z‑Wave ready</li>
+            <li>✅ <strong>Scalable</strong> — start with Core, grow to Works</li>
+          </ul>
         </div>
         <div class="card">
-          <h3>Google‑Based</h3>
-          <ul class="bullets">
-            <li>Nest displays/speakers, strong media integrations</li>
-            <li>Works well with Matter bridges (SwitchBot, etc.)</li>
-            <li>Balanced option for Android households</li>
-          </ul>
-          <a class="btn btn-secondary" href="intake-residential.html">Start with Google</a>
-        </div>
-        <div class="card">
-          <h3>Home Assistant‑Based</h3>
-          <ul class="bullets">
-            <li>Z‑Wave + Zigbee mesh (Zooz, Jasco/Enbrighten, IKEA)</li>
-            <li>Advanced automations and local control</li>
-            <li>Integrates Alexa/Google as optional voice front‑ends</li>
-          </ul>
-          <a class="btn btn-primary" href="intake-residential.html">Start with Home Assistant</a>
+          <h3>How pricing works</h3>
+          <p>Installed pricing includes hardware, configuration, and verification. Final estimate depends on brand mix, rooms, and wiring. Start with a quick intake and we’ll map you to the smallest package that wins.</p>
+          <a class="btn btn-primary" href="intake-residential.html">Start your estimate</a>
         </div>
       </div>
     </div>
   </main>
+
   <div id="site-footer"></div>
   <script src="assets/nav-loader.js"></script>
 </body>
