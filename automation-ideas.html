@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automation Ideas & Combos | KickAss Home Automation</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/nav-loader.js"></script>
+  <style>
+    /* light touches that reuse your design language */
+    .hero { padding: 4rem 0 2rem; }
+    .badge { display:inline-block; border:1px solid var(--border, #333); border-radius:999px; padding:.25rem .75rem; font-size:.8rem; opacity:.85; }
+    .filters { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 0; }
+    .filters button { border:1px solid var(--border, #333); background:transparent; padding:.5rem .75rem; border-radius:999px; cursor:pointer; }
+    .filters button.active { background:var(--accent, #00d4ff); color:#000; border-color:transparent; }
+    .ideas-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+    .card { border:1px solid var(--border, #333); border-radius:16px; padding:1rem; background:var(--card, #0e0e0e); }
+    .card h3 { margin:.25rem 0 .5rem; }
+    .pill { display:inline-block; border:1px solid var(--border, #333); border-radius:999px; padding:.1rem .5rem; font-size:.75rem; margin:.25rem .25rem 0 0; opacity:.85; }
+    .cta-wrap { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin-top:2rem; }
+    .cta { border:2px solid var(--border, #333); border-radius:20px; padding:1.25rem; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); }
+    .cta h3{ margin-top:0; }
+    .cta ul{ padding-left:1rem; margin:.5rem 0 1rem; }
+    .cta .price{ font-weight:700; font-size:1.25rem; margin:.25rem 0 1rem; }
+    .cta .btn{ display:inline-block; background:var(--accent, #00d4ff); color:#000; padding:.6rem 1rem; border-radius:12px; font-weight:700; text-decoration:none; }
+    .muted{ opacity:.85; }
+    .section { margin: 2rem 0; }
+    .sep { height:1px; background:var(--border, #333); margin:1.5rem 0; }
+  </style>
+</head>
+<body>
+  <header data-include="header.html"></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badge">For everyone</div>
+      <h1>Automation Ideas & Combos</h1>
+      <p class="muted">Tap a topic, see the ideas, and snag a recommended combo. Built to inspire—from condos to estates.</p>
+      
+    </section>
+
+    <!-- Quiz / Filter -->
+    <section class="section">
+      <h2>What are you thinking about?</h2>
+      <p class="muted">Tap a topic to filter ideas. Combine as many as you like.</p>
+      <div class="filters" id="filters">
+        <button data-tag="all" class="active">Show all</button>
+        <button data-tag="lighting">Lighting</button>
+        <button data-tag="safety">Safety</button>
+        <button data-tag="security">Security</button>
+        <button data-tag="energy">Energy</button>
+        <button data-tag="comfort">Comfort</button>
+        <button data-tag="water">Leak / Water</button>
+        <button data-tag="outdoor">Outdoor</button>
+        <button data-tag="fans">Fans</button>
+        <button data-tag="access">Access</button>
+        <button data-tag="care">Caregiving</button>
+        <button data-tag="estate">Large Property</button>
+      </div>
+    </section>
+
+    <!-- Conversion Packages -->
+    <section class="section">
+      <h2>Recommended Combos</h2>
+      <div class="cta-wrap">
+        <article class="cta">
+          <h3>Starter Package</h3>
+          <p class="price">From $— custom quote</p>
+          <ul>
+            <li>1 × Z-Wave hub (Z-Box)</li>
+            <li>2 × Smart switches (ZEN71/72)</li>
+            <li>1 × Motion sensor (ZSE18)</li>
+            <li>Dusk‑to‑dawn & walk‑path scenes</li>
+          </ul>
+          <p class="muted">Perfect first step: smarter lighting and welcome‑home automations that work even if Wi‑Fi hiccups.</p>
+          <a href="contact.html" class="btn">Request Starter Quote</a>
+        </article>
+
+        <article class="cta">
+          <h3>Comfort Package</h3>
+          <p class="price">From $— custom quote</p>
+          <ul>
+            <li>All Starter features</li>
+            <li>Humidity‑controlled bath fan</li>
+            <li>Smart thermostat + schedules</li>
+            <li>Leak sensor + Titan valve shutoff</li>
+          </ul>
+          <p class="muted">A calm, efficient home that looks after itself—lights, climate, and leak defense.</p>
+          <a href="contact.html" class="btn">Request Comfort Quote</a>
+        </article>
+
+        <article class="cta">
+          <h3>Estate Package</h3>
+          <p class="price">From $— custom quote</p>
+          <ul>
+            <li>All Comfort features</li>
+            <li>Z‑Wave Long Range for gates/outbuildings</li>
+            <li>Garage control + driveway presence</li>
+            <li>Smart locks, scenes, & proactive alerts</li>
+          </ul>
+          <p class="muted">For big properties and bold ideas—robust coverage, direct LR links, and hands‑off reliability.</p>
+          <a href="contact.html" class="btn">Request Estate Quote</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="sep"></div>
+
+    <!-- Curated quick routes (optional) -->
+    
+<section class="section">
+  <h2>Quick Picks</h2>
+  <div class="ideas-grid">
+    <article class="card">
+      <h3>Entry Level: Smart Lighting + Welcome</h3>
+      <p class="muted">A clean start: motion hall lights, dusk‑to‑dawn porch, and a one‑tap “Goodbye”.</p>
+      <p><strong>Includes:</strong> Z‑Box, 2× ZEN71/72, ZSE18, scenes</p>
+    </article>
+    <article class="card">
+      <h3>Comfort: Leak + Climate + Bath Fan</h3>
+      <p class="muted">Proactive comfort and protection without the cloud dependency.</p>
+      <p><strong>Includes:</strong> Starter + ZSE42 + Titan + ZSE44 + thermostat</p>
+    </article>
+    <article class="card">
+      <h3>Estate: LR Coverage + Access + Garage</h3>
+      <p class="muted">Long driveways, detached shops, gates—dialed in and dependable.</p>
+      <p><strong>Includes:</strong> Comfort + LR end devices + ZEN16/17 + locks</p>
+    </article>
+  </div>
+</section>
+
+
+    <!-- Ideas grid -->
+    <section class="section">
+      <h2>Idea Library</h2>
+      <div class="ideas-grid" id="ideas">
+        
+    <article class="card" data-tags="lighting,care,comfort,security">
+      <h3>Walk‑Path Lighting at Night</h3>
+      <p class="muted">Soft hallway/bedroom lights on low when motion is detected at night; off after a calm timeout.</p>
+      <div><span class="pill">Best combo: ZEN72 Dimmer + ZSE18 Motion</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN72, ZSE18</p>
+    </article>
+    
+
+    <article class="card" data-tags="lighting,security,energy,outdoor">
+      <h3>Dusk‑to‑Dawn Exterior</h3>
+      <p class="muted">Porch/drive lights auto on at sunset, off at sunrise, with randomization for away mode.</p>
+      <div><span class="pill">Best combo: ZEN71 Switch + Z‑Box scene</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN71</p>
+    </article>
+    
+
+    <article class="card" data-tags="security,energy,comfort">
+      <h3>Goodbye / Welcome Scenes</h3>
+      <p class="muted">One tap or geofence: lock doors, arm alarm scene, turn off lights, adjust thermostat.</p>
+      <div><span class="pill">Best combo: Z‑Box + ZEN32 Scene Controller</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> Z‑Box, ZEN32</p>
+    </article>
+    
+
+    <article class="card" data-tags="water,safety,security,estate">
+      <h3>Leak → Main Valve Shutoff</h3>
+      <p class="muted">Any leak sensor triggers the Titan to shut the main. Text + email alerts immediately.</p>
+      <div><span class="pill">Best combo: ZSE42 Leak + ZAC36 Titan + Z‑Box</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZSE42, ZAC36, Z‑Box</p>
+    </article>
+    
+
+    <article class="card" data-tags="fans,energy,comfort">
+      <h3>Bathroom Humidity Fan</h3>
+      <p class="muted">Automatically clear steam; disable overnight in guest rooms or keep a low threshold in kids’ bath.</p>
+      <div><span class="pill">Best combo: ZSE44 Humidity + ZEN75 Fan Relay</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZSE44, ZEN75</p>
+    </article>
+    
+
+    <article class="card" data-tags="security,outdoor,estate">
+      <h3>Garage: Auto‑Close & Alerts</h3>
+      <p class="muted">Close after timer or on bedtime scene; open/close alerts and ‘left open’ nudge.</p>
+      <div><span class="pill">Best combo: ZEN16/ZEN17 + tilt sensor + Z‑Box</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN16, ZEN17, ZSE43</p>
+    </article>
+    
+
+    <article class="card" data-tags="comfort,security,outdoor">
+      <h3>Smart Fireplace (Safety First)</h3>
+      <p class="muted">Relay interlock + scene button; auto‑off timer; disable if doors/windows open.</p>
+      <div><span class="pill">Best combo: ZEN17 Universal Relay + contact sensors</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN17, ZSE41</p>
+    </article>
+    
+
+    <article class="card" data-tags="outdoor,lighting,comfort">
+      <h3>Back Deck Party Mode</h3>
+      <p class="muted">Path lights + string lights + music power strip; scene button toggles it all.</p>
+      <div><span class="pill">Best combo: ZEN05 Outdoor Plug + ZEN32 Scene</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN05, ZEN32</p>
+    </article>
+    
+
+    <article class="card" data-tags="outdoor,comfort,energy,safety">
+      <h3>Hot Tub / Spa</h3>
+      <p class="muted">Safe on/off with outdoor GFCI load; lockout when cover is open; night‑quiet hours.</p>
+      <div><span class="pill">Best combo: ZEN15 Power Switch + contact sensor</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN15, ZSE41</p>
+    </article>
+    
+
+    <article class="card" data-tags="fans,comfort,energy">
+      <h3>Ceiling Fan: Three Ways</h3>
+      <p class="muted">Two‑switch, stacked, or single‑switch: on/off with ZEN75/30/52. Speed via Bond + scenes.</p>
+      <div><span class="pill">Best combo: ZEN30/ZEN75/ZEN52 + ZEN37 or Bond for speed</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN30, ZEN75, ZEN52, ZEN37, Bond</p>
+    </article>
+    
+
+    <article class="card" data-tags="care,lighting,comfort">
+      <h3>Nursery Quiet Hours</h3>
+      <p class="muted">Nightlight low, disable door chime, motion‑based soft lighting to avoid wakeups.</p>
+      <div><span class="pill">Best combo: ZEN72 + Z‑Box time scenes</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN72</p>
+    </article>
+    
+
+    <article class="card" data-tags="care,safety,lighting">
+      <h3>Senior Care Path</h3>
+      <p class="muted">Subtle lights, door open alerts, inactivity checks, and immediate smoke/CO push.</p>
+      <div><span class="pill">Best combo: ZEN55 Smoke/CO Bridge + motion path</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN55, ZSE18, ZEN72</p>
+    </article>
+    
+
+    <article class="card" data-tags="security,access">
+      <h3>Smarter Locks & Access</h3>
+      <p class="muted">Per‑user PINs with auto‑expire for cleaners and guests; lock on schedule.</p>
+      <div><span class="pill">Best combo: Z‑Wave lock + Z‑Box + scenes</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> Lock (Z‑Wave), Z‑Box</p>
+    </article>
+    
+
+    <article class="card" data-tags="estate,outdoor,security">
+      <h3>Estate Gate & Outbuildings</h3>
+      <p class="muted">ZWLR to barns, shop, and gate; direct LR links for fast response.</p>
+      <div><span class="pill">Best combo: Z‑Box + LR end devices + tilt/contact</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> Z‑Box, 800LR devices</p>
+    </article>
+    
+
+    <article class="card" data-tags="safety,security,water,energy">
+      <h3>Insurance‑Friendly Home</h3>
+      <p class="muted">Leak defense, smoke/CO push, presence lighting—save money and headaches.</p>
+      <div><span class="pill">Best combo: Titan + Leak + ZEN55 + scenes</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZAC36, ZSE42, ZEN55</p>
+    </article>
+    
+
+    <article class="card" data-tags="lighting,comfort">
+      <h3>Kitchen Presence Lighting</h3>
+      <p class="muted">Subtle toe‑kick lights on motion at night, overhead task lights by scene.</p>
+      <div><span class="pill">Best combo: ZEN72 + ZEN32 presets</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN72, ZEN32</p>
+    </article>
+    
+
+    <article class="card" data-tags="comfort,energy,fans">
+      <h3>Home Office Focus</h3>
+      <p class="muted">Occupancy‑based lights, fan, and ‘On Air’ when calls start; power strip energy watch.</p>
+      <div><span class="pill">Best combo: ZEN20 Power Strip + scenes</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> ZEN20, ZEN37</p>
+    </article>
+    
+
+    <article class="card" data-tags="security,lighting,outdoor">
+      <h3>Vacation Hardening</h3>
+      <p class="muted">Randomized lights, lock rules, garage lockout, proactive alerts & camera power.</p>
+      <div><span class="pill">Best combo: Z‑Box scenes + ZEN04/05</span></div>
+      <p class="muted"><strong>Suggested gear:</strong> Z‑Box, ZEN04, ZEN05</p>
+    </article>
+    
+      </div>
+    </section>
+  </main>
+
+  <footer data-include="footer.html"></footer>
+
+  <script>
+  // Simple tag filtering
+  (function() {
+    const buttons = Array.from(document.querySelectorAll('#filters button'));
+    const cards = Array.from(document.querySelectorAll('.card[data-tags]'));
+    let active = new Set(['all']);
+    function apply() {
+      const showAll = active.has('all') || active.size === 0;
+      cards.forEach(c => {
+        const tags = (c.dataset.tags || '').split(',');
+        const visible = showAll ? true : [...active].every(t => tags.includes(t));
+        c.style.display = visible ? '' : 'none';
+      });
+    }
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      const t = btn.dataset.tag;
+      if (t === 'all') { active = new Set(['all']); }
+      else {
+        if (active.has('all')) active.delete('all');
+        if (active.has(t)) active.delete(t); else active.add(t);
+      }
+      buttons.forEach(b => b.classList.toggle('active', active.has(b.dataset.tag)));
+      if (![...active].length) { active.add('all'); }
+      apply();
+    }));
+    apply();
+  })();
+  </script>
+</body>
+</html>
