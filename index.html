@@ -1,86 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>KickAss Home Automation — Automate your home with full confidence.</title>
-  <meta name="description" content="Attention to detail. Solutions that work. Life... Simplified!" />
+  <title>KickAss Home Automation — Build it bold. Ship it clean.</title>
+  <meta name="description" content="Home automation that actually ships: Alexa, Google, or Home Assistant packages, plus structured docs and verification workflows." />
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=4" />
-  <style>
-    /* ===== Compact homepage tuning (scoped to this page) ===== */
-    main.section.hero { padding-block: 2rem 0.75rem; }
-    section.section.alt { padding-block: 0.75rem 1rem; }
-    .container { max-width: 1100px; }
+  <link rel="stylesheet" href="assets/styles.css" />
 
-    .hero h1 {
-      font-size: clamp(28px, 4.8vw, 56px);
-      line-height: 1.05;
-      margin: 0 0 .35rem 0;
-    }
-    .hero .lead {
-      font-size: clamp(16px, 2.1vw, 20px);
-      line-height: 1.35;
-      margin: 0 0 .5rem 0;
-    }
-    .cta-row { margin-top: .6rem; gap:.5rem; display:flex; flex-wrap:wrap; }
-    .btn { padding:.55rem .85rem; font-size: .95rem; line-height:1; }
-
-    /* ===== Electric Gold Rotator (now BELOW CTAs) ===== */
-    .reason-rotator { position: relative; margin: .75rem 0 0; height: 3.0rem; overflow: hidden; }
-    .reason-rotator .line {
-      position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
-      font-family:'Bebas Neue', system-ui, sans-serif; letter-spacing:.5px;
-      font-size: clamp(24px, 4.8vw, 48px); line-height:1; white-space:nowrap;
-      color:#FFD700; text-shadow: 0 0 6px rgba(255,215,0,.85), 0 0 18px rgba(255,215,0,.35);
-      opacity:0;
-    }
-    .reason-rotator .line.enter { animation: flyIn .6s cubic-bezier(.19,1,.22,1) forwards, flicker 1.6s linear .6s 1; }
-    .reason-rotator .line.hold { opacity:1; }
-    .reason-rotator .line.exit { animation: flyOut .5s cubic-bezier(.55,.06,.68,.19) forwards; }
-
-    @keyframes flyIn { from { transform:translate(80vw,-50%); opacity:.0; } to { transform:translate(-50%,-50%); opacity:1; } }
-    @keyframes flyOut { from { transform:translate(-50%,-50%); opacity:1; } to { transform:translate(-130vw,-50%); opacity:0; } }
-    @keyframes flicker {
-      0%,19%,21%,23%,25%,54%,56%,100% { text-shadow: 0 0 6px rgba(255,215,0,.95), 0 0 22px rgba(255,215,0,.5); }
-      20%,24%,55% { text-shadow: 0 0 2px rgba(255,215,0,.4), 0 0 6px rgba(255,215,0,.25); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .reason-rotator .line.enter { animation: fadeIn .25s ease-out forwards; }
-      .reason-rotator .line.exit { animation: fadeOut .2s ease-in forwards; }
-      @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-      @keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
-    }
-
-    /* Tighten Learn teaser */
-    .section.alt h2.h3 { margin: .25rem 0 .5rem 0; font-size: clamp(16px, 2vw, 20px); }
-    .grid-3 { gap:.75rem; }
-    .card { padding:.75rem; }
-    .card h3 { font-size: clamp(16px, 2.2vw, 20px); }
-    .card p { font-size: .95rem; }
-  </style>
 </head>
 <body class="theme-dark">
   <div id="site-header"></div>
 
-  <main class="section hero">
+  <main class="section">
     <div class="container">
-      <h1>Automate your home with full confidence.</h1>
-      <p class="lead">Attention to detail. Solutions that work. Life... Simplified!</p>
-
+      <h1>Build it bold. Ship it clean. Convert with confidence.</h1>
+      <p class="lead">Bank‑grade discipline for data & workflows. We design lean, reliable systems that actually drive revenue.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="intake-residential.html">Get a quote</a>
         <a class="btn btn-secondary" href="packages.html">See packages</a>
       </div>
-
-      <!-- Rotating Reasons (now directly below CTAs) -->
-      <div class="reason-rotator" aria-live="polite" aria-atomic="true"></div>
     </div>
   </main>
 
-  <!-- Start here strip (compact) -->
+  <!-- Start here strip -->
   <section class="section alt">
     <div class="container">
       <h2 class="h3">Start here</h2>
@@ -100,47 +46,7 @@
       </div>
     </div>
   </section>
-
   <div id="site-footer"></div>
   <script src="assets/nav-loader.js"></script>
-  <script>
-    (function(){
-      const reasons = ['More life, fewer chores.', 'Lower bills — automatically.', 'Safer home, faster alerts.', 'Comfort that follows you.', 'Away? The house runs itself.'];
-      const rotator = document.querySelector('.reason-rotator');
-      let idx = 0;
-
-      function showNext() {
-        const text = reasons[idx % reasons.length];
-        idx++;
-        const line = document.createElement('div');
-        line.className = 'line enter';
-        line.textContent = text;
-        rotator.appendChild(line);
-
-        const holdTime = 1400; // slightly shorter to keep section compact
-        const enterDur = 600;
-        const exitDur = 500;
-
-        setTimeout(() => {
-          line.classList.remove('enter');
-          line.classList.add('hold');
-          setTimeout(() => {
-            line.classList.remove('hold');
-            line.classList.add('exit');
-            setTimeout(() => {
-              line.remove();
-              showNext();
-            }, exitDur + 20);
-          }, holdTime);
-        }, enterDur + 20);
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', showNext);
-      } else {
-        showNext();
-      }
-    })();
-  </script>
 </body>
 </html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automation Ideas | KickAss Home Automation</title>
+  <link rel="preload" href="/assets/styles.css" as="style">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <style>
+    /* lightweight local tweaks for tabs */
+    .tabs { display:flex; gap:.5rem; flex-wrap:wrap; margin:1rem 0; }
+    .tab-btn { padding:.6rem 1rem; border:1px solid var(--border,#e5e7eb); border-radius:999px; background:#fff; cursor:pointer; }
+    .tab-btn[aria-selected="true"] { background:var(--brand,#111827); color:#fff; }
+    .tabpanel { display:none; }
+    .tabpanel[aria-hidden="false"] { display:block; }
+    .page-hero { padding:3rem 1rem 1rem; text-align:center; }
+    .page-hero h1 { font-size:clamp(1.8rem,3vw,2.6rem); margin:0 0 .5rem; }
+    .sub { color:#6b7280; max-width:900px; margin:0 auto; }
+    .pkg-cta { background:#111827; color:#fff; padding:.6rem 1rem; border-radius:.5rem; text-decoration:none; display:inline-block; margin:.5rem 0 0; }
+    .notice { background:#f8fafc; border:1px solid #e5e7eb; padding:1rem; border-radius:.75rem; margin:1rem 0 2rem; }
+    .ideas-filter { display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin:1rem 0 2rem; }
+    .tag { padding:.4rem .8rem; border:1px solid #e5e7eb; border-radius:999px; cursor:pointer; }
+    .tag.active { background:#111827; color:#fff; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; }
+    .card { border:1px solid #e5e7eb; border-radius:.75rem; padding:1rem; background:#fff; display:flex; flex-direction:column; justify-content:space-between; }
+    .card h3 { margin:.2rem 0 .5rem; }
+    .card .meta { font-size:.85rem; color:#6b7280; }
+    .card .combo { margin:.6rem 0 0; font-size:.95rem; }
+    .divider { height:1px; background:#e5e7eb; margin:1rem 0; }
+  </style>
+  <script defer src="/assets/nav-loader.js"></script>
+</head>
+<body>
+  <header id="site-nav"></header>
+
+  <main class="container">
+    <section class="page-hero">
+      <h1>Automation Ideas &amp; Combos</h1>
+<button class='open-quote cta-button'>Get a Quote</button>
+      <p class="sub">Thinking about lighting that follows you, a flood system that shuts the water itself, or a gate that opens as you arrive? Browse our best real‑world ideas below. Use the tabs to see <strong>All</strong>, <strong>Luxury/Estate</strong>, or <strong>Starter/Condo</strong> picks.</p>
+      <div class="notice">
+        Prefer a guided package? Check out our curated <a href="/packages.html">Starter, Comfort, and Estate bundles</a> for fast decisions and fewer clicks.
+      </div>
+      <div class="tabs" role="tablist" aria-label="Ideas Views">
+        <button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab-all" id="tab-all-btn">All Ideas</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-lux" id="tab-lux-btn">Luxury / Estate</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-starter" id="tab-starter-btn">Starter / Condo</button>
+      </div>
+    </section>
+
+    <!-- All Ideas -->
+    <section id="tab-all" class="tabpanel" role="tabpanel" aria-hidden="false" aria-labelledby="tab-all-btn">
+      <div class="ideas-filter" data-scope="all">
+        <button class="tag active" data-tag="all">All</button>
+        <button class="tag" data-tag="lighting">Lighting</button>
+        <button class="tag" data-tag="safety">Safety</button>
+        <button class="tag" data-tag="care">Caregiving</button>
+        <button class="tag" data-tag="outdoor">Outdoor</button>
+        <button class="tag" data-tag="access">Access</button>
+        <button class="tag" data-tag="comfort">Comfort</button>
+      </div>
+      <div class="cards" id="all-cards">
+        <!-- Lighting / Scenes -->
+        <article class="card" data-tags="lighting comfort">
+          <h3>Adaptive Whole‑Home Lighting</h3>
+          <p class="meta">Z‑Wave dimmers + motion + lux sensing</p>
+          <p>Lights follow presence and daylight. Evening warm‑dim, late‑night pathlights, hands‑free bathrooms.</p>
+          <div class="combo"><strong>Best combo:</strong> ZEN72/77 dimmers, ZEN11 Q Sensor, ZEN32 scene controller, Z‑Box hub.</div>
+        </article>
+
+        <article class="card" data-tags="safety comfort">
+          <h3>Flood Defense That Shuts Itself</h3>
+          <p class="meta">Leak sensors + Titan valve + alerts</p>
+          <p>Sensors trip → valve closes → lights flash → phone pings. Works even when internet is down.</p>
+          <div class="combo"><strong>Best combo:</strong> ZSE42 leak sensors, ZAC36 Titan actuator, Z‑Box hub scenes & interactive notifications.</div>
+        </article>
+
+        <article class="card" data-tags="access safety">
+          <h3>Smart Door Access &amp; Away Mode</h3>
+          <p class="meta">Locks + modes + lighting</p>
+          <p>Unique codes for family/caregivers; away scene locks doors, turns off lights, arms alerts.</p>
+          <div class="combo"><strong>Best combo:</strong> Z‑Wave locks, ZEN32 scene pad, geofence or mode‑based scenes on Z‑Box.</div>
+        </article>
+
+        <article class="card" data-tags="outdoor access">
+          <h3>Estate Gate &amp; Outbuilding Control</h3>
+          <p class="meta">ZWLR long‑range + relays + tilt sensors</p>
+          <p>Open gates from the drive, monitor barns/shops, cover long distances without Wi‑Fi.</p>
+          <div class="combo"><strong>Best combo:</strong> ZWLR USB stick on hub, ZEN16/17 relays, ZSE43 tilt, LR‑capable repeaters.</div>
+        </article>
+
+        <article class="card" data-tags="comfort lighting">
+          <h3>Ceiling Fan Automations</h3>
+          <p class="meta">Humidity/temperature rules + safe fan control</p>
+          <p>Bath fans on humidity; bedroom fans on temp or bedtime; living room fans on presence.</p>
+          <div class="combo"><strong>Best combo:</strong> ZSE44 humidity/temperature, ZEN75 (on/off), ZEN30 Double Switch, or Bond for speed control.</div>
+        </article>
+
+        <article class="card" data-tags="outdoor comfort">
+          <h3>Back Deck &amp; Hot Tub Vibes</h3>
+          <p class="meta">Outdoor lighting + pumps + safety</p>
+          <p>Pathlights at dusk, deck scenes for dinner/movie, hot tub pump schedules and temperature alerts.</p>
+          <div class="combo"><strong>Best combo:</strong> ZEN05 outdoor plug, ZEN20 power strip (protected), ZEN32 deck scene pad.</div>
+        </article>
+
+        <article class="card" data-tags="comfort">
+          <h3>Fireplace (Safely) on a Scene</h3>
+          <p class="meta">Dry‑contact relay + presence</p>
+          <p>Tie a dry‑contact fireplace to a supervised relay with strict safety interlocks and timeouts.</p>
+          <div class="combo"><strong>Best combo:</strong> ZEN17 Universal Relay (low‑voltage control only), occupancy + 30‑min auto‑off scene.</div>
+        </article>
+
+        <article class="card" data-tags="care safety">
+          <h3>Caregiver Peace‑of‑Mind</h3>
+          <p class="meta">Activity patterns + alerts + soft lighting</p>
+          <p>Night pathlights, no‑motion daytime check‑ins, door chimes, medication reminders via scenes.</p>
+          <div class="combo"><strong>Best combo:</strong> ZSE18 motion, ZSE41 contacts, ZEN32 reminders, ZEN55 Smoke/CO Bridge.</div>
+        </article>
+
+        <article class="card" data-tags="access">
+          <h3>Garage That Behaves</h3>
+          <p class="meta">Tilt sensor + relay + safety close</p>
+          <p>Auto‑close at night, alerts if open, one‑tap close from the car.</p>
+          <div class="combo"><strong>Best combo:</strong> ZEN16/17 relay, ZSE43 tilt, safety delay + buzzer light scene on Z‑Box.</div>
+        </article>
+
+        <article class="card" data-tags="safety">
+          <h3>Whole‑Home Fire Alerts</h3>
+          <p class="meta">Bridge your existing detectors</p>
+          <p>Get phone alerts when interconnected smoke/CO goes off; unlock doors, lights to full, cut fans.</p>
+          <div class="combo"><strong>Best combo:</strong> ZEN55 Smoke &amp; CO Detector Bridge + scenes.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Luxury tab (curated) -->
+    <section id="tab-lux" class="tabpanel" role="tabpanel" aria-hidden="true" aria-labelledby="tab-lux-btn">
+      <div class="cards">
+        <article class="card">
+          <h3>Arrival Avenue: Gate → Lights → Music</h3>
+          <p>Geo‑arrival opens the estate gate, sets driveway lights to warm‑dim, cues patio audio.</p>
+          <div class="combo"><strong>Best combo:</strong> ZWLR hub + ZEN16 gate relay, landscape dimmers, scene pad by garage.</div>
+        </article>
+        <article class="card">
+          <h3>Guest House Ready Mode</h3>
+          <p>One tap preps the casita: HVAC to comfort, pathlights on, guest code active, camera privacy on.</p>
+          <div class="combo"><strong>Best combo:</strong> Z‑Wave lock, thermostat, dimmers, Z‑Box scenes + temporary codes.</div>
+        </article>
+        <article class="card">
+          <h3>Pool &amp; Hot Tub Steward</h3>
+          <p>Circulation/pump schedules, heater guardrails, deck scenes, “All Off” safety macro at midnight.</p>
+          <div class="combo"><strong>Best combo:</strong> Outdoor plugs/relays (rated), GFCI circuits, deck scene controller.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Starter tab (curated) -->
+    <section id="tab-starter" class="tabpanel" role="tabpanel" aria-hidden="true" aria-labelledby="tab-starter-btn">
+      <div class="cards">
+        <article class="card">
+          <h3>Hands‑Free Hall &amp; Bath</h3>
+          <p>Motion‑on, auto‑off after 10 minutes; late‑night 20% dim. Zero phone fiddling.</p>
+          <div class="combo"><strong>Best combo:</strong> ZEN72 dimmer + ZSE18 motion.</div>
+        </article>
+        <article class="card">
+          <h3>Leak Kit + Auto Shutoff</h3>
+          <p>Starter safety: two leak sensors + Titan on the main. Text and email alerts.</p>
+          <div class="combo"><strong>Best combo:</strong> Z‑Box + ZSE42 x2 + ZAC36 Titan.</div>
+        </article>
+        <article class="card">
+          <h3>Smart Lock + Welcome Scene</h3>
+          <p>Unlock → foyer lights on, thermostat comfy. Great for condos and townhomes.</p>
+          <div class="combo"><strong>Best combo:</strong> Z‑Wave lock + ZEN32 scene pad.</div>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin:2rem 0 4rem; text-align:center;">
+      <a class="pkg-cta" href="/packages.html">See Packages &amp; Pricing Options</a>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script>
+    // simple tabs
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = {
+      all: document.getElementById('tab-all'),
+      lux: document.getElementById('tab-lux'),
+      starter: document.getElementById('tab-starter')
+    };
+    function selectTab(id){
+      tabs.forEach(btn=>btn.setAttribute('aria-selected', String(btn.id===`tab-${id}-btn`)));
+      Object.entries(panels).forEach(([k,el])=>{
+        el.setAttribute('aria-hidden', String(k!==id));
+      });
+    }
+    document.getElementById('tab-all-btn').addEventListener('click', ()=>selectTab('all'));
+    document.getElementById('tab-lux-btn').addEventListener('click', ()=>selectTab('lux'));
+    document.getElementById('tab-starter-btn').addEventListener('click', ()=>selectTab('starter'));
+
+    // tag filtering (All tab)
+    const filterWrap = document.querySelector('.ideas-filter[data-scope="all"]');
+    const cards = Array.from(document.querySelectorAll('#all-cards .card'));
+    filterWrap?.addEventListener('click', (e)=>{
+      const t = e.target.closest('.tag');
+      if(!t) return;
+      filterWrap.querySelectorAll('.tag').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      const tag = t.dataset.tag;
+      cards.forEach(card=>{
+        if(tag==='all'){ card.style.display='flex'; return; }
+        const ct = card.getAttribute('data-tags')||'';
+        card.style.display = ct.includes(tag)?'flex':'none';
+      });
+    });
+  </script>
+
+<!-- Get a Quote Modal -->
+<div id="quoteModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Request a Quote</h2>
+    <form id="quoteForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="details">Project Details:</label>
+      <textarea id="details" name="details" rows="4" required></textarea>
+      <button type="submit" class="cta-button">Send Request</button>
+    </form>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var modal = document.getElementById("quoteModal");
+  var span = document.getElementsByClassName("close")[0];
+
+  document.querySelectorAll(".open-quote").forEach(btn => {
+    btn.onclick = function() {
+      modal.style.display = "block";
+    };
+  });
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+});
+</script>
+
+<style>
+.modal { display:none; position:fixed; z-index:1000; padding-top:60px;
+  left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4); }
+.modal-content { background-color:#fefefe; margin:auto; padding:20px; border:1px solid #888;
+  width:80%; max-width:500px; border-radius:8px; }
+.close { color:#aaa; float:right; font-size:28px; font-weight:bold; cursor:pointer; }
+.close:hover { color:black; }
+</style>
+
+
+<!-- Quote Modal -->
+<div id="quote-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+  <div class="modal-backdrop" data-close="true"></div>
+  <div class="modal-content">
+    <button class="modal-close" data-close="true" aria-label="Close">×</button>
+    <h2 id="quote-title">Get a Quote</h2>
+    <p>Tell us what you want to automate. We’ll follow up with a tailored plan and pricing.</p>
+    <form id="quote-form">
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Phone (optional)
+        <input type="tel" name="phone" />
+      </label>
+      <label>
+        What do you want to automate?
+        <textarea name="notes" rows="4" placeholder="e.g., Flood protection + gate + hot tub lighting" required></textarea>
+      </label>
+      <button type="submit" class="btn primary">Send</button>
+      <p class="form-note">No spam—just smart ideas.</p>
+    </form>
+  </div>
+</div>
+<style>
+  /* minimal modal styles; uses your existing CSS variables if present */
+  .modal.hidden { display: none; }
+  .modal { position: fixed; inset: 0; z-index: 1000; }
+  .modal-backdrop { position: absolute; inset:0; background: rgba(0,0,0,.5); }
+  .modal-content { position: relative; margin: 6vh auto; max-width: 560px; background: #fff; color: #111; border-radius: 12px; padding: 24px; box-shadow: 0 10px 40px rgba(0,0,0,.2); }
+  .modal-close { position: absolute; top: 8px; right: 12px; border: 0; background: transparent; font-size: 24px; cursor: pointer; }
+  #quote-form { display: grid; gap: 12px; }
+  #quote-form input, #quote-form textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+  .btn.primary { background: var(--accent, #0ea5e9); color: #fff; border: 0; padding: 10px 16px; border-radius: 10px; cursor: pointer; }
+  .form-note { font-size: .9rem; opacity: .75; margin-top: 6px;}
+</style>
+<script>
+(function(){
+  const modal = document.getElementById('quote-modal');
+  function openModal(prefill){
+    if (prefill) {
+      const notes = modal.querySelector('textarea[name="notes"]');
+      if (notes && !notes.value) notes.value = prefill;
+    }
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('.cta-quote');
+    if (btn) {
+      const prefill = btn.getAttribute('data-prefill') || '';
+      openModal(prefill);
+    }
+    if (e.target.matches('[data-close]')) {
+      closeModal();
+    }
+  });
+  document.getElementById('quote-form')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    // In production, POST to your backend or a form service endpoint here.
+    alert('Thanks! We'll be in touch shortly.');
+    e.target.reset();
+    closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>

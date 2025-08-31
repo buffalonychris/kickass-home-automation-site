@@ -2,142 +2,28 @@
 <html lang="en">
 <head>
   <title>Case Study: Real‑World Home Automations — KickAss</title>
-  <meta name="description" content="A room‑by‑room map of devices and automations from a real smart home, aligned to Alexa, Google, and Home Assistant packages." />
+  <meta name="description" content="Case Study: Real‑World Home Automations — KickAss Home Automation" />
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=2" />
+  <link rel="stylesheet" href="assets/styles.css" />
+
 </head>
 <body class="theme-dark">
   <div id="site-header"></div>
-  <main class="section case">
+
+  <main class="section">
     <div class="container narrow">
       <nav class="breadcrumbs"><a href="learn.html">Learn</a> / Case Study: Real‑World Home Automations</nav>
       <h1>Case Study: Real‑World Home Automations</h1>
-      <p class="muted">Based on a public walkthrough of Jimmy Hawkins’ home. Devices and automations organized by room and mapped to our packages.</p>
-
-      <h2>Living Room</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> Leviton scene controller, presence sensor (mmWave), Govee M1 LED strips (soldered across shelves), Eve Flare portable lamp (Thread/HomeKit).</li>
-          <li><strong>Automations:</strong> TV scene dims lights; presence keeps lights on while seated; LED scenes for sports and alarm state.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Alexa</span><span class="badge">Google</span><span class="badge">Home Assistant</span></div>
-      </div>
-
-      <h2>Primary Bedroom</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> Hunter Wi‑Fi fan (HomeKit), Aqara motion, SwitchBot Curtain (gen1) + solar, SmartThings Station (Qi charger + routine trigger).</li>
-          <li><strong>Automations:</strong> Night routine on phone‑dock; curtains AM/PM; fan tied to presence/night scenes.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Alexa</span><span class="badge">Google</span><span class="badge">Home Assistant</span></div>
-      </div>
-
-      <h2>Primary Bathroom</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> Yoolax Zigbee shades, 4‑in‑1 humidity sensor, Zooz scene button, smart outlet for hair tools, Echo Flex, Oral‑B BT toothbrush.</li>
-          <li><strong>Automations:</strong> Shades guarded while showering (humidity); button colors command shades; outlet cuts power on away; toothbrush triggers night shutdown.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Home Assistant</span><span class="badge">Alexa</span></div>
-      </div>
-
-      <h2>Kitchen</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> U by Moen faucet; Sharp microwave drawer (Wi‑Fi); Echo Show 15 (Fire TV); Zooz Z‑Wave dimmers + association; Aqara temp/air sensor near coffee maker.</li>
-          <li><strong>Automations:</strong> Voice preset fills coffee pot; circuits dim together via association; coffee steam spike announces ready.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Alexa</span><span class="badge">Home Assistant</span></div>
-      </div>
-
-      <h2>Laundry Room</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> Energy‑monitoring smart plug (washer), vibration sensor (dryer), water leak sensor tied to main shutoff.</li>
-          <li><strong>Automations:</strong> Alerts when cycles finish; automatic main shutoff on leak.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Home Assistant</span></div>
-      </div>
-
-      <h2>Kids’ Rooms</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Son</h3>
-          <ul class="bullets">
-            <li>Govee Glide Hexa panels; IKEA Zigbee shade; Third Reality button for bedside lamp.</li>
-            <li>Night scene; shade open AM/close PM; manual bedside control.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Daughter</h3>
-          <ul class="bullets">
-            <li>SwitchBot Curtain (latest) via SwitchBot Matter Hub; Govee table lamp; “Fandelier” via Bond/Broadlink RF bridge.</li>
-            <li>Curtains scheduled; voice/automation control for RF fan.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="muted">Packages: <span class="badge">Alexa</span><span class="badge">Google</span><span class="badge">Home Assistant</span></div>
-
-      <h2>Entry / Mesh Strategy</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> Mix of Jasco/Enbrighten Zigbee & Z‑Wave dimmers (blue LED match).</li>
-          <li><strong>Practice:</strong> At least one Zigbee and one Z‑Wave device per room to strengthen meshes.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Home Assistant</span></div>
-      </div>
-
-      <h2>Pet Automation</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> Vibration sensor on dog’s bell.</li>
-          <li><strong>Automation:</strong> Whole‑home announcement + phone/watch notifications when bell rings.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Home Assistant</span><span class="badge">Alexa</span><span class="badge">Google</span></div>
-      </div>
-
-      <h2>Garage</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> MyQ opener (Amazon Key), Dome Z‑Wave “smart mousetrap”.</li>
-          <li><strong>Automations:</strong> Delivery access; instant alert when mousetrap triggers.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Alexa</span><span class="badge">Home Assistant</span></div>
-      </div>
-
-      <h2>Office</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li><strong>Devices:</strong> Leviton voice dimmer (Alexa‑built‑in), Zigbee dimmer, smart‑plugged space heater; Wyze cam with barking alerts; Nest Hub + HomePod minis; Third Reality Zigbee blinds; Dreametech L20 Ultra vac/mop.</li>
-          <li><strong>Automations:</strong> Heater cuts off on away; blinds half‑drop on high lux; nightly vacuum with headlight for object detection.</li>
-        </ul>
-        <div class="muted">Packages: <span class="badge">Alexa</span><span class="badge">Google</span><span class="badge">Home Assistant</span></div>
-      </div>
-
-      <h2>Controller Platform</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li>Home now primarily runs on <strong>Home Assistant Yellow</strong> for flexible local automations; SmartThings still used for testing.</li>
-        </ul>
-      </div>
-
-      <div class="pager">
-        <a class="prev" href="choosing-your-system.html">← Which system is right for you?</a>
-        <span></span>
-      </div>
+      <p class='muted'>Content coming soon.</p>
+      <div class="pager"><a class="prev" href="choosing-your-system.html">← Which system is right for you?</a></div>
     </div>
   </main>
   <div id="site-footer"></div>
   <script src="assets/nav-loader.js"></script>
-  <style>
-    .grid-2 { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; }
-    .case h2 { margin-top:2rem; }
-    .badge { display:inline-block; padding:.15rem .5rem; border:1px solid rgba(255,215,0,.35); border-radius:999px; color:#FFD700; font-size:.8rem; margin-right:.3rem; }
-    .muted { color:#aaa; }
-  </style>
 </body>
 </html>

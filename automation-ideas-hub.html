@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automation Ideas Hub | KickAss Home Automation</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/nav-loader.js" defer></script>
+  <style>
+    .tabs { display: flex; gap: 1rem; border-bottom: 2px solid #444; margin-bottom: 1rem; }
+    .tab { padding: 0.75rem 1.25rem; cursor: pointer; font-weight: bold; }
+    .tab.active { border-bottom: 3px solid var(--accent-color); color: var(--accent-color); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    iframe { width: 100%; height: 1200px; border: none; }
+  </style>
+</head>
+<body>
+  <div id="nav"></div>
+  <main class="content">
+    <h1>Automation Ideas Hub</h1>
+    <p>Explore automation ideas and recommended setups. Switch between views: All ideas, Luxury/Estate combos, or Starter setups.</p>
+
+    <div class="tabs">
+      <div class="tab active" data-target="all">All Ideas</div>
+      <div class="tab" data-target="luxury">Luxury / Estate</div>
+      <div class="tab" data-target="starter">Starter / Condo</div>
+    </div>
+
+    <div id="all" class="tab-content active">
+      <iframe src="automation-ideas.html"></iframe>
+    </div>
+    <div id="luxury" class="tab-content">
+      <iframe src="automation-ideas-luxury.html"></iframe>
+    </div>
+    <div id="starter" class="tab-content">
+      <iframe src="automation-ideas-starter.html"></iframe>
+    </div>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+
+<!-- Quote Modal -->
+<div id="quote-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+  <div class="modal-backdrop" data-close="true"></div>
+  <div class="modal-content">
+    <button class="modal-close" data-close="true" aria-label="Close">×</button>
+    <h2 id="quote-title">Get a Quote</h2>
+    <p>Tell us what you want to automate. We’ll follow up with a tailored plan and pricing.</p>
+    <form id="quote-form">
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Phone (optional)
+        <input type="tel" name="phone" />
+      </label>
+      <label>
+        What do you want to automate?
+        <textarea name="notes" rows="4" placeholder="e.g., Flood protection + gate + hot tub lighting" required></textarea>
+      </label>
+      <button type="submit" class="btn primary">Send</button>
+      <p class="form-note">No spam—just smart ideas.</p>
+    </form>
+  </div>
+</div>
+<style>
+  /* minimal modal styles; uses your existing CSS variables if present */
+  .modal.hidden { display: none; }
+  .modal { position: fixed; inset: 0; z-index: 1000; }
+  .modal-backdrop { position: absolute; inset:0; background: rgba(0,0,0,.5); }
+  .modal-content { position: relative; margin: 6vh auto; max-width: 560px; background: #fff; color: #111; border-radius: 12px; padding: 24px; box-shadow: 0 10px 40px rgba(0,0,0,.2); }
+  .modal-close { position: absolute; top: 8px; right: 12px; border: 0; background: transparent; font-size: 24px; cursor: pointer; }
+  #quote-form { display: grid; gap: 12px; }
+  #quote-form input, #quote-form textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+  .btn.primary { background: var(--accent, #0ea5e9); color: #fff; border: 0; padding: 10px 16px; border-radius: 10px; cursor: pointer; }
+  .form-note { font-size: .9rem; opacity: .75; margin-top: 6px;}
+</style>
+<script>
+(function(){
+  const modal = document.getElementById('quote-modal');
+  function openModal(prefill){
+    if (prefill) {
+      const notes = modal.querySelector('textarea[name="notes"]');
+      if (notes && !notes.value) notes.value = prefill;
+    }
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('.cta-quote');
+    if (btn) {
+      const prefill = btn.getAttribute('data-prefill') || '';
+      openModal(prefill);
+    }
+    if (e.target.matches('[data-close]')) {
+      closeModal();
+    }
+  });
+  document.getElementById('quote-form')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    // In production, POST to your backend or a form service endpoint here.
+    alert('Thanks! We'll be in touch shortly.');
+    e.target.reset();
+    closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>

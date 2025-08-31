@@ -1,0 +1,14 @@
+KickAss Home Automation - Get a Quote Integration (Google Form)
+----------------------------------------------------------------
+Updated files:
+  - nav.html (added 'Ideas', 'Packages' if missing, and 'Get a Quote' button -> opens Google Form)
+  - ideas.html (added CTA section + floating FAB button; normalized any 'Get a Quote' links to the Google Form)
+  - packages.html (added CTA section + floating FAB button; normalized any 'Get a Quote' links to the Google Form)
+
+Google Form: https://docs.google.com/forms/d/e/1FAIpQLSfk2MHMtC2btLVsyOGOM14mdeNCSigvAJtH40oRbeTXHgh38w/viewform?usp=header
+
+Backups created as *.bak next to each updated file.
+
+Deployment:
+  Replace the corresponding files on your server with the updated versions from this folder.
+  If you use includes/templating for nav, use the updated nav.html from the same relative path.

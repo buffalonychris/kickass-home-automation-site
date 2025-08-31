@@ -23,17 +23,6 @@
     .compare { border:1px dashed #e5e7eb; border-radius:.75rem; padding:1rem; }
   </style>
   <script defer src="/assets/nav-loader.js"></script>
-
-    <style>
-      .btn-quote{display:inline-block;padding:.6rem 1rem;border-radius:9999px;background:#111;color:#fff;text-decoration:none;font-weight:600}
-      .btn-quote:hover{opacity:.9}
-      .quote-cta{margin:2rem 0;padding:1.25rem;border:1px solid #eee;border-radius:12px;background:#fafafa;text-align:center}
-      .quote-cta h2{margin:.25rem 0 0.5rem;font-size:1.5rem}
-      .quote-cta p{margin:0 0 1rem;color:#555}
-      .quote-fab{position:fixed;right:16px;bottom:16px;z-index:9999}
-      .quote-fab a{box-shadow:0 10px 25px rgba(0,0,0,.15)}
-    </style>
-    
 </head>
 <body>
   <header id="site-nav"></header>
@@ -112,17 +101,7 @@
       <h3>What’s next?</h3>
       <p>Pick a package to start, then cherry‑pick from our <a href="/automation-ideas.html">Ideas &amp; Combos</a> library. We’ll right‑size hardware and finalize scenes after a walkthrough.</p>
     </section>
-  
-    <section class="quote-cta" aria-label="Get a Quote">
-      <h2>Ready to build your package?</h2>
-      <p>Tell us what you’re thinking and we’ll tailor a plan to your space and budget.</p>
-      <a class="btn-quote" href="https://docs.google.com/forms/d/e/1FAIpQLSfk2MHMtC2btLVsyOGOM14mdeNCSigvAJtH40oRbeTXHgh38w/viewform?usp=header" target="_blank" rel="noopener">Get a Quote</a>
-    </section>
-    <div class="quote-fab" aria-hidden="true">
-      <a class="btn-quote" href="https://docs.google.com/forms/d/e/1FAIpQLSfk2MHMtC2btLVsyOGOM14mdeNCSigvAJtH40oRbeTXHgh38w/viewform?usp=header" target="_blank" rel="noopener" title="Get a Quote">Get a Quote</a>
-    </div>
-    
-</main>
+  </main>
 
   <footer id="site-footer"></footer>
 
